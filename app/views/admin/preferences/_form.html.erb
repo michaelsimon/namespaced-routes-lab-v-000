@@ -1,0 +1,7 @@
+<%= form_for (@preference), :url => admin_preference_path do |f| %>
+Artist Sort Order: <%= f.select :artist_sort_order, options_for_select(['ASC'],['DESC']) %><br>
+Song Sort Order: <%= f.select :song_sort_order, options_for_select(['ASC'],['DESC']) %><br>
+Allow Creation of Artists: <%= f.check_box :allow_create_artists %><br>
+Allow Creation of Songs: <%= f.check_box :allow_create_songs %><br>
+<%= f.submit %>
+<% end %>
